@@ -23,6 +23,21 @@ def algorithm1(arr):
 				maxSum = currentSum
 	return maxSum
 
+def algorithm3(arr):
+    maxSum = 0
+    currentSum = 0
+
+    for i in arr:
+
+        # If the current index and subarray are positive, keep adding to the subarray
+        if currentSum + i > 0:
+            currentSum = currentSum + i
+        else:
+            currentSum = 0
+        if currentSum > maxSum:
+            maxSum = currentSum
+    return maxSum
+
 arr1 = []
 arr2 = []
 arr3 = []
@@ -32,7 +47,17 @@ arr6 = []
 arr7 = []
 arr8 = []
 arr9 = []
-elapsed = 0
+
+arr10 = []
+arr11 = []
+arr12 = []
+arr13 = []
+arr14 = []
+arr15 = []
+arr16 = []
+arr17 = []
+arr18 = []
+
 
 fillArray(arr1, 100)
 fillArray(arr2, 200)
@@ -44,9 +69,22 @@ fillArray(arr7, 700)
 fillArray(arr8, 800)
 fillArray(arr9, 900)
 
+fillArray(arr10, 1000)
+fillArray(arr11, 2000)
+fillArray(arr12, 3000)
+fillArray(arr13, 4000)
+fillArray(arr14, 5000)
+fillArray(arr15, 6000)
+fillArray(arr16, 7000)
+fillArray(arr17, 8000)
+fillArray(arr18, 9000)
+
+elapsed = 0
+
 for i in range(10):	
 	start = time.time()
-	print algorithm1(arr9)
+	print algorithm3(arr18)
 	end = time.time()
 	elapsed += end - start
+
 print elapsed/10
