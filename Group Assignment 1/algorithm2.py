@@ -1,36 +1,20 @@
-def maxSubArray(arr):
-	maxSum = 0
-	# try all subarray lengths
-	for j in range(0, len(arr)):
-		# compute first subarray sum
-		for element in range(arr[i], arr[i+j]):
-			currentSum += element
-		# try all subarray locations
-		for i in range(0, len(arr) - j):
-			if i > 0:
-				curSum = curSum - arr[i - 1] + arr[i + j - 1]
-			if curSum > maxSum:
-				maxSum = curSum
-	return maxSum
-
-print maxSubArray([31, -41, 59, 26, -53, 58, 97, -93, -23, 84])
-
-
-
-'''
 def algorithm2(arr):
 	maxSum = 0
-	# try all subarray lengths
+	
+	# Try all subarray lengths
 	for j in range(0, len(arr)):
-		# compute first subarray sum
-		for element in range(arr[i], arr[i+j]):
+		
+		# Compute first subarray sum
+		currentSum = 0
+		for element in arr[0 : j]:
 			currentSum += element
-		# try all subarray locations
+		
+		# Try all subarray locations
 		for i in range(0, len(arr) - j):
 			if i > 0:
-				curSum = curSum - arr[i - 1] + arr[i + j - 1]
-			if curSum > maxSum:
-				maxSum = curSum
+				currentSum = currentSum - arr[i - 1] + arr[i + j - 1]
+			if currentSum > maxSum:
+				maxSum = currentSum
 	return maxSum
 
 # Tests
@@ -66,4 +50,3 @@ print algorithm2([8, -39, -24, -30, 41, -8, 22, -13, 49, 17, 9, 0, -4, -10, 19, 
 
 # 0
 print algorithm2([-3 -4 -5 -6 -7])
-'''
