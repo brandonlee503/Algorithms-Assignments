@@ -2,14 +2,14 @@ def algorithm1(arr):
 	maxSum = 0
 
 	# Try all subarray lengths
-	for j in range(0, len(arr)):
+	for i in range(0, len(arr)):
 
 		# Try all subarray locations
-		for i in range(0, len(arr) - j):
+		for j in range(0, len(arr) - i):
 			currentSum = 0
 
 			# Sum subarray
-			for element in arr[i : i + j]:
+			for element in arr[j : i + j]:
 				currentSum += element
 			if currentSum > maxSum:
 				maxSum = currentSum
