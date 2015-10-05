@@ -4,7 +4,6 @@ import time
 def fillArray(arr, size):
 	for i in range(size):
 		arr.append(randint(-10, 10))
-	#print arr
 
 def algorithm1(arr):
 	maxSum = 0
@@ -22,6 +21,27 @@ def algorithm1(arr):
 			if currentSum > maxSum:
 				maxSum = currentSum
 	return maxSum
+
+
+def algorithm2(arr):
+	maxSum = 0
+	
+	# Try all subarray lengths
+	for j in range(0, len(arr)):
+		
+		# Compute first subarray sum
+		currentSum = 0
+		for element in arr[0 : j]:
+			currentSum += element
+		
+		# Try all subarray locations
+		for i in range(0, len(arr) - j):
+			if i > 0:
+				currentSum = currentSum - arr[i - 1] + arr[i + j - 1]
+			if currentSum > maxSum:
+				maxSum = currentSum
+	return maxSum
+
 
 def algorithm3(arr):
     maxSum = 0
@@ -83,7 +103,7 @@ elapsed = 0
 
 for i in range(10):	
 	start = time.time()
-	print algorithm3(arr18)
+	print algorithm2(arr18)
 	end = time.time()
 	elapsed += end - start
 
