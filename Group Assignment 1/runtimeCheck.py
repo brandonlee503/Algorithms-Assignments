@@ -1,3 +1,7 @@
+# Group Assignment 1
+# Brandon Lee, Rutger Farry
+# Experimental Run-Time Analysis
+
 from random import randint
 import time
 
@@ -103,7 +107,9 @@ elapsed = 0
 
 for i in range(10):	
 	start = time.time()
-	print algorithm2(arr18)
+
+	# Set your specific algorithm and array here to obtain runtime analysis 
+	print algorithm1(arr1)
 	end = time.time()
 	elapsed += end - start
 

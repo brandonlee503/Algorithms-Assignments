@@ -1,3 +1,8 @@
+# Group Assignment 1
+# Brandon Lee, Rutger Farry
+# Algorithm 1
+
+
 def algorithm1(arr):
 	maxSum = 0
 
