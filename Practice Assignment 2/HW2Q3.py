@@ -21,7 +21,6 @@ def algorithm3(arr):
 			print "if len(temp) > maxLength is: " + str(len(temp) > maxLength)
 
 			if isSublist(temp, reversedArray) and len(temp) > maxLength: #temp in reversedArray
-				print "LALALALALALALA"
 				maxLength = len(temp)
 				#maxLength = reversedArray.count(temp)
 				print "DAAAAA MATX LENGTH: " + str(maxLength)
