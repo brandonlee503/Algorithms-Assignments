@@ -35,3 +35,5 @@ def main():
     n = len(arr)/arr[0]
     maxSum = mostMagicalSubsequence(arr, 0, n-1)
     print(maxSum)
+
+main()
